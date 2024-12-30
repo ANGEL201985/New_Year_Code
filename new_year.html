@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Año Nuevo!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    button {
+      background-color: #ffcc00;
+      border: none;
+      color: #333;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background-color: #ffd633;
+      transform: scale(1.1);
+    }
+    .mensaje {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      animation: bounce 1.5s infinite;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 ¡Feliz Año Nuevo les desea PaveTech! 🎉</h1>
+  <button onclick="mostrarMensaje()"><b>Clic para buenos deseos</b> 🎁</button>
+  <div class="mensaje" id="mensaje">
+    🎆 Que este año esté lleno de alegría, éxitos y felicidad. ¡Feliz Año Nuevo! 🎆
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      mensaje.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
